@@ -1,0 +1,101 @@
+/* ===== 基础设定 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 1.6;
+}
+
+/* ===== 布局容器 ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ===== 站点页首 ===== */
+.site-header {
+    background: #d8d8d8;
+    /* 依 navagation_bar.png 的灰色 */
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+/* ===== 桌面版导航 ===== */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    /* 间距大致与图片一致 */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.main-nav li.active a {
+    font-weight: 700;
+    /* Home 加粗 */
+}
+
+/* ===== 手机版 MENU 按钮 ===== */
+.menu-toggle {
+    display: none;
+    /* 桌面隐藏 */
+    background: none;
+    border: 1px solid #000;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* ===== RWD：<=767px 为手机版 ===== */
+@media (max-width:767px) {
+
+    /* MENU 按钮改为可见 */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* 导航改为覆盖式下拉 */
+    .main-nav {
+        position: absolute;
+        top: 64px;
+        /* 根据 header 高度微调 */
+        right: 0;
+        width: 100%;
+        background: #d8d8d8;
+        transform: translateY(-100%);
+        transition: transform .3s ease;
+    }
+
+    .main-nav.open {
+        transform: translateY(0);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .main-nav li {
+        padding: .5rem 1.5rem;
+    }
+}
