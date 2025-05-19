@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>職能發展學院</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- 站点页首（导航列） -->
+    <header class="site-header">
+        <div class="container">
+            <!-- 左侧 Logo／站名 -->
+            <h1 class="logo">職能發展學院</h1>
+
+            <!-- 桌面版导航菜单 -->
+            <nav id="main-nav" class="main-nav">
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">課程規劃</a></li>
+                    <li><a href="#">最新訊息</a></li>
+                    <li><a href="#">交通資訊</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </nav>
+
+            <!-- 手机版右上角 MENU 按钮 -->
+            <button id="menu-toggle" class="menu-toggle" aria-label="開啟選單">MENU</button>
+        </div>
+        <link rel="stylesheet" href="../static/css/index.css">
+    </header>
+
+
+    <!-- 主内容区，仅示意 -->
+    <main class="site-main">
+        <section class="hero">
+            <div class="container">
+                <h2>歡迎來到職能發展學院</h2>
+                <p>這裡是內容示例，您可替換為實際介紹。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚（可视需要删除或扩充） -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 職能發展學院．保留所有權利</p>
+        </div>
+    </footer>
+
+    <!-- 仅用於手机板 MENU 开关的小段 JS，桌面不受影响 -->
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('main-nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
